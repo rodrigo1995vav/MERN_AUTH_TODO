@@ -5,7 +5,7 @@
    
    The mongo database is set to be Mongo Atlas (cloud) but you can change the DB_URI var on the .env to be anything u want even a local db.
 
-   The server side of this app as multiple options (some of them not fully working) but you can connect it to a Slack channel so it can send u all the errors there. The database is set to be a mongodb but  changing ENGINE_DB to mysql (and few lines of code) you can use a sql database. 
+   The server side of this app as multiple options (some of them not fully working) but you can connect it to a Slack channel so it can send u all the errors there. The database is set to be a mongodb, if you change the evairoment var ENGINE_DB to mysql (and few lines of code) you can use a sql database. 
 
 
 # Client Commands

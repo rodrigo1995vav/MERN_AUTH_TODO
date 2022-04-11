@@ -5,13 +5,14 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 
 
+
 const Login = () => {
     const { setAuth } = useAuth();
 
 
     const navigate = useNavigate()
     const location = useLocation()
-    const from = location.state?.from?.pathname || "/"
+    //const from = location.state?.from?.pathname || "/"
 
 
     const userRef = useRef();
@@ -32,10 +33,15 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const str = email.toLowerCase();
+        // Replacing " " (space) to "" empty space
+        const emailOk = str.replace(/ /g, '')
+        console.log(emailOk); 
+
         try {
             const response = await loginUser(
                 {
-                    "email":email,
+                    "email":emailOk,
                     "password":pwd
                 }
             )
@@ -47,7 +53,7 @@ const Login = () => {
             //const roles = response?.data?.data.user.role;
             const roles = ["user"]
             const user = response.data.data.user.name
-            setAuth({ user, email, roles, accessToken });
+            setAuth({ user, emailOk, roles, accessToken });
             setEmail('');
             setPwd('');
             navigate('/folderlist')

@@ -9,7 +9,9 @@ const checkRole = require("../middleware/role")
 
 router.post("/", authMiddleware, getItems )
 
-router.get("/:id", authMiddleware,validatorGetItem, getItem)
+
+//In case is needed to request for a single task, not in use 
+//router.get("/:id", authMiddleware,validatorGetItem, getItem)
 
 router.put("/:id", authMiddleware,validatorGetItem, updateItem )
 

@@ -1,7 +1,11 @@
+
+//middleware not in use, here just for testing 
+
+
 const customHeader = (req, res ,next) => {
     try {
         const apiKey = req.headers.api_key
-        if(apiKey === "leifer-01") {
+        if(apiKey === "Rodrigo--REC.709") {
             next()
         }else{
             res.status(403)

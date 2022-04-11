@@ -5,12 +5,17 @@ import { addTask, deleteTask, getTasks, updateTask } from '../services/apiServic
 import useAuth from "../hooks/useAuth";
 import useFolder from '../hooks/useFolder';
 import { GoTasklist } from 'react-icons/go';
+import { BiArrowBack } from 'react-icons/bi';
+import { useNavigate } from 'react-router-dom';
+
 
 function TodoList() {
   
   const [todos, setTodos] = useState([]);
   const { currentFolder } = useFolder();
   const { auth } = useAuth();
+  const navigate = useNavigate()
+
   
 
   useEffect(() => {
@@ -86,8 +91,20 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
+  const back = async () => {
+
+    navigate('/folderlist');
+}
+
+
+
+
   return (
     <>
+   
+    <button className="go-back" onClick={back} ><BiArrowBack className='back-button'/></button>
+     
+    <div>
       <h1>{currentFolder.fol} <GoTasklist/></h1>
       <h3>What's the plan for today {auth?.user}?</h3>
       <TodoForm onSubmit={addTodo} />
@@ -97,6 +114,7 @@ function TodoList() {
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
+    </div>
     </>
   );
 }

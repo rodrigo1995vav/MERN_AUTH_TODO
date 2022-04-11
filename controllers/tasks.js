@@ -32,7 +32,7 @@ const createItem = async (req, res) =>{
         body.userId = user._id
         console.log( body )
         const data = await tasksModel.create(body)
-        res.send({data, user})
+        res.send({data})
         // const task = await new tasksModel(req).save();
         // res.send(task);
     } catch (e) {

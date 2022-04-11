@@ -8,7 +8,7 @@ const loggerStream = {
         webHook.send({
             text: message
         })
-        console.log('Capturando el LOG', message)
+        console.log('Getting the LOG', message)
       // do anything - emit to websocket? send message somewhere? log to cloud?
     },
   };

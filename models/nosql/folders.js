@@ -6,7 +6,7 @@ const FoldersSchema = new mongoose.Schema(
             required: true
         },
         userId:{
-            type:String
+            type:mongoose.Types.ObjectId,
         }     
     },
     {

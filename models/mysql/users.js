@@ -8,9 +8,6 @@ const User = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    age: {
-      type: DataTypes.NUMBER,
-    },
     email: {
       type: DataTypes.STRING,
     },

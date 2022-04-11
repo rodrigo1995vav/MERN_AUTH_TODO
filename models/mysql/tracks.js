@@ -4,22 +4,16 @@ const { DataTypes } = require("sequelize");
 const Tracks = sequelize.define(
   "tracks",
   {
-    name: {
+    task: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    album: {
+    folderId: {
       type: DataTypes.STRING,
     },
-    mediaId: {
+    userId: {
       type: DataTypes.STRING,
-    },
-    password: {
-      type: DataTypes.STRING,
-    },
-    role: {
-      type: DataTypes.ENUM(["user", "admin"]),
-    },
+    },    
   },
   {
     timestamps: true,

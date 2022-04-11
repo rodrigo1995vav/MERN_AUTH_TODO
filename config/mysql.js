@@ -22,7 +22,7 @@ const sequelize = new Sequelize(
 const dbConnectMySql = async () =>{
     try {
         await sequelize.authenticate()
-        console.log("Connection succed")
+        console.log("Connection succeed")
     } catch (e) {
         console.log("Connection ERROR", e)
     }

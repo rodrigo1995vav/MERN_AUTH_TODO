@@ -12,7 +12,7 @@ const validatorLoginItem= [
 const validatorRegisterItem= [
   check("name").exists().notEmpty(),
   check("email").exists().notEmpty().isEmail(),
-  check("password").exists().notEmpty().isLength({min:4, max:30}),
+  check("password").exists().notEmpty().isLength({min:4, max:40}),
   (req, res, next) => {
     validateResults(req, res, next);
   },

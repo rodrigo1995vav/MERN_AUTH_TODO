@@ -1,14 +1,14 @@
 const { sequelize } = require("../../config/mysql");
 const { DataTypes } = require("sequelize");
 
-const Storage = sequelize.define(
-  "storages",
+const Foldres = sequelize.define(
+  "folders",
   {
-    url: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    filename: {
+    userId: {
       type: DataTypes.NUMBER,
     }
   },
@@ -17,4 +17,4 @@ const Storage = sequelize.define(
   }
 );
 
-module.exports = Storage;
+module.exports = Foldres;

@@ -16,13 +16,13 @@
 
  Sign Up to have your own data.
 
-# Run Commands
+# Run Commands on Root folder
 
 *First time lunch (will install all dependencies and lunch server and client)
 
     npm run dev
 
-*Second time lunch (will run server and client)
+*Second time lunch (will run server and client only)
 
     npm run go
 

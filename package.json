@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"cd client && npm run start\" \"npm run start\"",
+    "install": "cd client && npm install --only=dev && npm install ",
+    "go": "concurrently \"cd client && npm run start\" \"npm run start\"",
+    "dev": "npm install && cd client && npm install --only=dev && cd .. && concurrently \"cd client && npm run start\" \"npm run start\"",
     "start": "nodemon ./app.js"
   },
   "keywords": [],

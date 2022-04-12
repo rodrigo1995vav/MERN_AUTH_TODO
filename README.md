@@ -16,13 +16,15 @@
 
  Sign Up to have your own data.
 
-# Client Commands
-    npm install
-    npm start
+# Run Commands
 
-# Server Commands
-    npm install
+*First time lunch (will install all dependencies and lunch server and client)
+
     npm run dev
+
+*Second time lunch (will run server and client)
+
+    npm run go
 
 # Heroku Link to see this project fully working
 
